@@ -1,14 +1,20 @@
-import { Button } from "./components/ui/button";
-import { Input } from "./components/ui/input";
+import { Route, Routes } from "react-router-dom";
+import PostPage from "./pages/post";
+import HomePage from "./pages/home";
+import NewsPage from "./pages/news";
+import SessionPage from "./pages/sessions";
+import Layout from "./components/Layout";
 
 function App() {
     return (
-        <div className="bg-green-300 h-screen w-screen flex justify-center items-center ">
-            <div>
-                <Input />
-                <Button>Нажми меня</Button>
-            </div>
-        </div>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="post" element={<PostPage />} />
+                <Route path="news" element={<NewsPage />} />
+                <Route path="sessions" element={<SessionPage />} />
+            </Route>
+        </Routes>
     );
 }
 
