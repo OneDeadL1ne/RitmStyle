@@ -2,15 +2,17 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 
 export default function Layout() {
-    return (
-        <div className="h-screen">
-            <header className=" w-full">
-                <Header />
-            </header>
-            <main className="min-h-full flex justify-center items-center">
-                <Outlet />
-            </main>
-            <footer className="">Подвал</footer>
-        </div>
-    );
+	return (
+		<html lang="en">
+			<body className="flex flex-col h-screen">
+				<header className=" w-full">
+					<Header />
+				</header>
+				<main className="min-h-full flex-grow justify-center items-center">
+					<Outlet />
+				</main>
+				<footer className="w-full row-auto">Подвал</footer>
+			</body>
+		</html>
+	);
 }
