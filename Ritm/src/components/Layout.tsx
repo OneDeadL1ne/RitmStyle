@@ -8,7 +8,7 @@ export default function Layout() {
 				<header className=" w-full">
 					<Header />
 				</header>
-				<main className="min-h-full flex-grow justify-center items-center">
+				<main className="min-h-full flex-grow">
 					<Outlet />
 				</main>
 				<footer className="w-full row-auto">Подвал</footer>
