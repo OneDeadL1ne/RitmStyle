@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout() {
 	return (
@@ -11,7 +12,9 @@ export default function Layout() {
 				<main className="min-h-full flex-grow">
 					<Outlet />
 				</main>
-				<footer className="w-full row-auto">Подвал</footer>
+				<footer className="flex w-full justify-center row-auto  text-white  ">
+					<Footer />
+				</footer>
 			</body>
 		</html>
 	);
